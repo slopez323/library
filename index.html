@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Sacramento&family=Koulen&family=Barlow&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/b1efd90343.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>my library</h1>
+        <button class="button-56" role="button" id="create">add book</button>
+    </div>
+
+    <div class="popup-container">
+        <div class="new-inputs">
+            <div class="exit">x</div>
+            <h3>Details of New Book</h3>
+            <label for="title-input">Title<input type="text" class="input" id="title-input" autocomplete="off"></label>
+            <label for="author-input">Author<input type="text" class="input" id="author-input" autocomplete="off"></label>
+            <label for="pages-input">Number of Pages<input type="number" class="input" id="pages-input"></label>
+            <label for="read-input">Read Status<div class="read-options input"><label for="read-done"><input type="radio"
+                            name="read-input" id="read-done" value="Yes">Read</label><label for="not-read"><input
+                            type="radio" name="read-input" id="not-read" value="No">Not Read</label></div></label>
+                            <button class="button-57" role="button" id="submit"><span class="text">Submit</span><span>Add to library</span></button>
+        </div>
+    </div>
+
+    <div class="library">
+
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

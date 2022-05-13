@@ -1,0 +1,350 @@
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  margin: 0;
+}
+
+.header {
+  width: calc(100% - 40px);
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Mochiy Pop One', sans-serif;
+  margin: 0 0 0 30px;
+}
+
+.header button {
+  margin-right: 30px;
+  font-family: 'Sacramento', cursive;
+  font-size: 1.8rem;
+}
+
+.popup-container {
+  display: none;
+}
+
+.popup-container.popup {
+  display: block;
+  background-color: rgba(193, 193, 193, 0.876);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+}
+
+.new-inputs {
+  background-color: #e8e1c9;
+  font-family: 'Koulen', cursive;
+  color: #3f5a7a;
+  height: max(40vh, 400px);
+  width: max(40vw, 400px);
+  max-width: 90vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 15px;
+  border-radius: 5px;
+
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.exit {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-weight: bold;
+}
+
+.exit:hover {
+  cursor: pointer;
+}
+
+.new-inputs h3 {
+  margin: 0;
+  justify-self: center;
+  align-self: end;
+}
+
+.new-inputs>label {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: end;
+  justify-items: center;
+
+  font-weight: bold;
+  width: 90%;
+}
+
+.new-inputs input:not([type="radio"]) {
+  width: 70%;
+  text-align: center;
+  font-family: 'Koulen', cursive;
+  text-transform: uppercase;
+}
+
+.new-inputs input[type="number"] {
+  width: 40%;
+}
+
+.new-inputs input[type="radio"] {
+  accent-color: #a66070;
+}
+
+.new-inputs input:not([type="radio"]):focus {
+  outline: 1px solid darkolivegreen;
+}
+
+.read-options {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  font-weight: normal;
+}
+
+.new-inputs button {
+  justify-self: center;
+  align-self: center;
+  font-family: 'Koulen', cursive;
+}
+
+.text {
+  font-family: 'Sacramento', cursive;
+  font-size: 1.2rem;
+}
+
+.library {
+  width: calc(100% - 40px);
+  padding: 20px;
+  background-color: lightsteelblue;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: max-content;
+  gap: 10px;
+}
+
+.empty{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Koulen', cursive;
+  font-size: 2.5rem;
+  color: darkslategray;
+}
+
+.card {
+  position: relative;
+  max-width: 350px;
+  padding: 15px 20px;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card p {
+  margin: 5px 0;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  overflow-wrap: break-word;
+}
+
+.card-title {
+  font-size: 1.7rem;
+  font-family: 'Koulen', cursive;
+  color: rgb(168, 115, 115);
+  text-transform: uppercase;
+}
+
+.card-author {
+  font-size: 1rem;
+}
+
+.card-author span {
+  text-transform: uppercase;
+}
+
+.card-pages {
+  font-size: .9rem;
+}
+
+.card-status {
+  display: grid;
+  font-family: 'Koulen', cursive;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.done {
+  color: darkseagreen;
+}
+
+.pending {
+  color: chocolate;
+}
+
+.card .fa-trash {
+  position: absolute;
+  font-size: .8rem;
+  top: 10px;
+  right: 10px;
+  color: darkgray;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.card-input:last-child {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.missing {
+  border: 2px dashed chocolate;
+  border-radius: 5px;
+}
+
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+.button-57 {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-57 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button-57 span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+@media (hover:hover) {
+  .button-57:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+  }
+
+  .button-57:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+  }
+
+  .button-57:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  }
+}
