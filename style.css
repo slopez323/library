@@ -95,6 +95,7 @@ h1 {
   text-align: center;
   font-family: 'Koulen', cursive;
   text-transform: uppercase;
+  font-size: .9rem;
 }
 
 .new-inputs input[type="number"] {
@@ -106,7 +107,10 @@ h1 {
 }
 
 .new-inputs input:not([type="radio"]):focus {
-  outline: 1px solid darkolivegreen;
+  border: 2px solid #a66070;
+  border-radius: 5px;
+  outline: none;
+  caret-color: #a66070;
 }
 
 .read-options {
@@ -146,6 +150,7 @@ h1 {
   font-family: 'Koulen', cursive;
   font-size: 2.5rem;
   color: darkslategray;
+  text-align: center;
 }
 
 .card {
